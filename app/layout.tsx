@@ -13,20 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Samet — Designer & Developer",
+  metadataBase: new URL("https://aptus0.github.io"),
+  title: "Samet — Salesforce Developer",
   description:
-    "Samet'in seçilmiş dijital ürün, web tasarımı ve yaratıcı geliştirme çalışmaları.",
+    "Samet'in Salesforce, Apex, Lightning Web Components ve CRM otomasyonu portföyü.",
   openGraph: {
-    title: "Samet — Designer & Developer",
-    description: "Fikirleri etkileyici dijital deneyimlere dönüştürüyorum.",
+    title: "Samet — Salesforce Developer",
+    description: "Salesforce'u iş sonuçlarına dönüşen güçlü çözümlere dönüştürüyorum.",
     type: "website",
     locale: "tr_TR",
     images: [{ url: "/og.png", width: 1734, height: 907, alt: "Samet portföyü" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Samet — Designer & Developer",
-    description: "Fikirleri etkileyici dijital deneyimlere dönüştürüyorum.",
+    title: "Samet — Salesforce Developer",
+    description: "Salesforce'u iş sonuçlarına dönüşen güçlü çözümlere dönüştürüyorum.",
     images: ["/og.png"],
   },
   icons: {

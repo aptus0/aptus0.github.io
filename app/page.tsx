@@ -1,37 +1,37 @@
 const projects = [
   {
     number: "01",
-    title: "Noma Studio",
-    type: "Marka deneyimi · 2026",
+    title: "Sales Cloud 360",
+    type: "Salesforce CRM · 2026",
     description:
-      "Yaratıcı bir stüdyo için strateji, görsel kimlik ve yüksek dönüşümlü dijital deneyim.",
+      "Satış ekipleri için fırsat yönetimini sadeleştiren, otomasyon ve gerçek zamanlı raporlama odaklı CRM çözümü.",
     color: "project-blue",
-    tags: ["Creative direction", "Web design"],
+    tags: ["Apex", "LWC", "Sales Cloud"],
   },
   {
     number: "02",
-    title: "Mori",
-    type: "Dijital ürün · 2025",
+    title: "Service Hub",
+    type: "Service Cloud · 2025",
     description:
-      "Günlük rutinleri sakinleştiren, erişilebilir ve insan odaklı bir wellness platformu.",
+      "Omnichannel yönlendirme ve akıllı vaka akışlarıyla müşteri destek operasyonlarını hızlandıran platform.",
     color: "project-lime",
-    tags: ["Product design", "Development"],
+    tags: ["Service Cloud", "Flow", "Integration"],
   },
   {
     number: "03",
-    title: "Aster Finance",
-    type: "Fintech · 2025",
+    title: "Partner Connect",
+    type: "Experience Cloud · 2025",
     description:
-      "Karmaşık finansal verileri net, güvenilir ve etkileyici bir ürüne dönüştüren arayüz.",
+      "İş ortaklarının teklif, sipariş ve destek süreçlerini tek noktadan yönettiği güvenli self-servis portal.",
     color: "project-coral",
-    tags: ["UX strategy", "Interface"],
+    tags: ["Experience Cloud", "Apex API", "LWC"],
   },
 ];
 
 const services = [
-  ["01", "Ürün & Web Tasarımı", "İş hedeflerini güçlü bir dijital deneyime dönüştüren strateji, kullanıcı akışı ve arayüz tasarımı."],
-  ["02", "Frontend Geliştirme", "Hızlı, erişilebilir ve her ekranda kusursuz çalışan modern web deneyimleri."],
-  ["03", "Marka & Yaratıcı Yön", "Markanızı tanınır ve tutarlı kılan görsel dil, tipografi ve dijital sistem."],
+  ["01", "Salesforce Geliştirme", "Apex, Lightning Web Components ve Flow ile güvenilir, ölçeklenebilir kurumsal çözümler."],
+  ["02", "CRM Otomasyonu", "Satış ve servis ekiplerinin tekrar eden işlerini azaltan akıllı süreçler ve onay akışları."],
+  ["03", "Sistem Entegrasyonu", "Salesforce'u REST/SOAP API ve event tabanlı mimarilerle diğer iş sistemlerine bağlayan entegrasyonlar."],
 ];
 
 export default function Home() {
@@ -54,19 +54,20 @@ export default function Home() {
       <section className="hero shell" id="top">
         <div className="eyebrow">
           <span className="status-dot" />
-          Yeni projeler için müsait · İstanbul
+          Salesforce projeleri için müsait · İstanbul
         </div>
         <h1>
-          Fikirleri <em>etkileyici</em>
+          Salesforce&apos;u <em>iş sonuçlarına</em>
           <br />
-          dijital deneyimlere
+          dönüşen güçlü
           <br />
-          dönüştürüyorum.
+          çözümlere dönüştürüyorum.
         </h1>
         <div className="hero-bottom">
           <p>
-            Merhaba, ben Samet. Strateji, tasarım ve teknolojiyi birleştirerek
-            insanların hatırladığı dijital ürünler yaratıyorum.
+            Merhaba, ben Samet. Apex, Lightning Web Components ve otomasyon
+            gücünü kullanarak işletmeler için ölçeklenebilir Salesforce
+            deneyimleri geliştiriyorum.
           </p>
           <a className="circle-link" href="#work" aria-label="Projeleri gör">
             <span>Projeleri gör</span>
@@ -79,8 +80,8 @@ export default function Home() {
 
       <section className="trust-strip">
         <div className="shell trust-inner">
-          <span>STRATEJİ</span><i>✦</i><span>TASARIM</span><i>✦</i>
-          <span>GELİŞTİRME</span><i>✦</i><span>DENEYİM</span>
+          <span>APEX</span><i>✦</i><span>LIGHTNING</span><i>✦</i>
+          <span>AUTOMATION</span><i>✦</i><span>INTEGRATION</span>
         </div>
       </section>
 
@@ -90,7 +91,7 @@ export default function Home() {
             <span className="section-number">(01)</span>
             <p>Seçilmiş çalışmalar</p>
           </div>
-          <h2>Detaylara verilen özen,<br />büyük farklar yaratır.</h2>
+          <h2>Doğru CRM mimarisi,<br />ölçülebilir fark yaratır.</h2>
         </div>
         <div className="projects">
           {projects.map((project) => (
@@ -102,7 +103,7 @@ export default function Home() {
                   <div className="mock-content">
                     <span>{project.title}</span>
                     <strong>{project.title.charAt(0)}</strong>
-                    <small>Independent digital experience</small>
+                    <small>Salesforce business solution</small>
                   </div>
                 </div>
                 <a href="#contact" aria-label={`${project.title} projesini incele`}>↗</a>
@@ -129,7 +130,7 @@ export default function Home() {
               <span className="section-number">(02)</span>
               <p>Neler yapıyorum?</p>
             </div>
-            <h2>İyi görünen değil,<br /><em>iyi çalışan</em> işler.</h2>
+            <h2>Sadece çalışan değil,<br /><em>değer üreten</em> sistemler.</h2>
           </div>
           <div className="service-list">
             {services.map(([number, title, description]) => (
@@ -152,16 +153,17 @@ export default function Home() {
           </div>
           <div className="about-copy">
             <span className="section-number">(03) Hakkımda</span>
-            <h2>Tasarım benim için süs değil, <em>bir problemi en zarif şekilde çözme biçimi.</em></h2>
+            <h2>Salesforce benim için bir CRM&apos;den fazlası: <em>iş süreçlerini dönüştüren bir platform.</em></h2>
             <p>
-              Dijital ürünler, markalar ve web deneyimleri tasarlıyor; fikrin ilk
-              çizgisinden çalışan son ürüne kadar her aşamada yaratıcı ve
-              sistematik düşünüyorum.
+              Karmaşık iş ihtiyaçlarını temiz veri modellerine, sürdürülebilir
+              Apex koduna ve kullanıcı dostu Lightning deneyimlerine
+              dönüştürüyorum. Her çözümde güvenlik, performans ve ölçeklenebilirliği
+              birlikte ele alıyorum.
             </p>
             <div className="stats">
               <div><strong>4+</strong><span>Yıllık deneyim</span></div>
-              <div><strong>24</strong><span>Tamamlanan proje</span></div>
-              <div><strong>100%</strong><span>Detay tutkusu</span></div>
+              <div><strong>24</strong><span>CRM teslimatı</span></div>
+              <div><strong>3×</strong><span>Salesforce sertifikası</span></div>
             </div>
           </div>
         </div>
@@ -170,12 +172,12 @@ export default function Home() {
       <section className="contact section" id="contact">
         <div className="shell contact-inner">
           <span className="section-number">(04) Yeni bir proje</span>
-          <h2>Aklında güzel bir fikir mi var?<br /><em>Birlikte hayata geçirelim.</em></h2>
+          <h2>Salesforce&apos;ta çözmek istediğin<br /><em>bir iş problemi mi var?</em></h2>
           <a href="mailto:hello@samet.design">hello@samet.design <span>↗</span></a>
         </div>
         <footer className="shell">
           <a className="brand" href="#top">S<span>✦</span></a>
-          <p>© 2026 Samet. Özenle tasarlandı.</p>
+          <p>© 2026 Samet. Salesforce üzerinde özenle geliştirildi.</p>
           <div><a href="#">LinkedIn</a><a href="#">GitHub</a><a href="#">Instagram</a></div>
         </footer>
       </section>
