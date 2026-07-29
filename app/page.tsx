@@ -37,24 +37,12 @@ const services = [
 export default function Home() {
   return (
     <main>
-      <header className="nav shell">
-        <a className="brand" href="#top" aria-label="Ana sayfa">
-          <img src="/logo.svg" alt="Samet — Salesforce Developer" />
-        </a>
-        <nav aria-label="Ana menü">
-          <a href="#work">Projeler</a>
-          <a href="#services">Hizmetler</a>
-          <a href="#about">Hakkımda</a>
-        </nav>
-        <a className="nav-cta" href="#contact">
-          Birlikte çalışalım <span>↗</span>
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="hero shell" id="top">
         <div className="eyebrow">
           <span className="status-dot" />
-          Salesforce projeleri için müsait · İstanbul
+          Salesforce projeleri için müsait · Bursa
         </div>
         <h1>
           Salesforce&apos;u <em>iş sonuçlarına</em>
@@ -65,11 +53,11 @@ export default function Home() {
         </h1>
         <div className="hero-bottom">
           <p>
-            Merhaba, ben Samet. Apex, Lightning Web Components ve otomasyon
+            Merhaba, ben Samet ER. Apex, Lightning Web Components ve otomasyon
             gücünü kullanarak işletmeler için ölçeklenebilir Salesforce
             deneyimleri geliştiriyorum.
           </p>
-          <a className="circle-link" href="#work" aria-label="Projeleri gör">
+          <a className="circle-link" href="/projects" aria-label="Projeleri gör">
             <span>Projeleri gör</span>
             <b>↓</b>
           </a>
@@ -106,7 +94,7 @@ export default function Home() {
                     <small>Salesforce business solution</small>
                   </div>
                 </div>
-                <a href="#contact" aria-label={`${project.title} projesini incele`}>↗</a>
+                <a href="/projects" aria-label={`${project.title} projesini incele`}>↗</a>
               </div>
               <div className="project-info">
                 <div>
@@ -149,7 +137,7 @@ export default function Home() {
         <div className="about-card">
           <div className="portrait" aria-label="Samet için portre alanı">
             <div className="portrait-shape">S</div>
-            <span>İstanbul<br />Türkiye</span>
+            <span>Bursa<br />Türkiye</span>
           </div>
           <div className="about-copy">
             <span className="section-number">(03) Hakkımda</span>
@@ -173,14 +161,14 @@ export default function Home() {
         <div className="shell contact-inner">
           <span className="section-number">(04) Yeni bir proje</span>
           <h2>Salesforce&apos;ta çözmek istediğin<br /><em>bir iş problemi mi var?</em></h2>
-          <a href="mailto:hello@samet.design">hello@samet.design <span>↗</span></a>
+          <div className="contact-actions">
+            <a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn&apos;den ulaş <span>↗</span></a>
+            <a href={githubUrl} target="_blank" rel="noreferrer">GitHub profilim <span>↗</span></a>
+          </div>
         </div>
-        <footer className="shell">
-          <a className="brand" href="#top" aria-label="Ana sayfaya dön"><img src="/logo.svg" alt="Samet — Salesforce Developer" /></a>
-          <p>© 2026 Samet. Salesforce üzerinde özenle geliştirildi.</p>
-          <div><a href="#">LinkedIn</a><a href="#">GitHub</a><a href="#">Instagram</a></div>
-        </footer>
+        <SiteFooter />
       </section>
     </main>
   );
 }
+import { SiteFooter, SiteHeader, githubUrl, linkedinUrl } from "./site-shell";

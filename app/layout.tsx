@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Experience Cloud",
     "Salesforce Entegrasyonu",
     "CRM Developer",
-    "İstanbul Salesforce Developer",
+    "Bursa Salesforce Developer",
     "Samet Salesforce",
   ],
   alternates: {
@@ -88,7 +88,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://aptus0.github.io/#person",
-  name: "Samet",
+    name: "Samet ER",
   url: "https://aptus0.github.io/",
   image: "https://aptus0.github.io/og.png",
   jobTitle: "Salesforce Developer",
@@ -108,7 +108,7 @@ const structuredData = {
   sameAs: ["https://github.com/aptus0"],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "İstanbul",
+    addressLocality: "Bursa",
     addressCountry: "TR",
   },
 };

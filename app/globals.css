@@ -151,11 +151,58 @@ em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .contact-inner { text-align: center; }
 .contact-inner h2 { font-size: clamp(48px, 7vw, 94px); letter-spacing: -.065em; line-height: .98; font-weight: 500; margin: 40px auto 60px; }
 .contact-inner em { color: var(--acid); }
-.contact-inner > a { display: inline-flex; align-items: center; gap: 40px; padding: 18px 28px; background: var(--acid); color: var(--ink); border-radius: 999px; font-size: 15px; }
-.contact-inner > a span { font-size: 22px; }
+.contact-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+.contact-actions a { display: inline-flex; align-items: center; gap: 40px; padding: 18px 28px; background: var(--acid); color: var(--ink); border-radius: 999px; font-size: 15px; }
+.contact-actions a:nth-child(2) { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.5); }
+.contact-actions a span { font-size: 22px; }
 footer { border-top: 1px solid rgba(255,255,255,.3); padding-top: 30px; margin-top: 120px; display: flex; justify-content: space-between; align-items: center; }
 footer p { font-size: 11px; opacity: .7; }
 footer > div { display: flex; gap: 24px; font-size: 12px; }
+
+.subpage-hero { padding: 100px 0 110px; }
+.subpage-hero h1 { font-size: clamp(64px, 8vw, 116px); line-height: .9; letter-spacing: -.07em; font-weight: 600; margin: 42px 0; }
+.subpage-hero h1 em { color: #7457ee; }
+.subpage-hero > p { width: min(580px, 100%); margin-left: auto; font-size: 18px; line-height: 1.7; color: #56534e; }
+
+.detail-projects { padding-bottom: 140px; }
+.detail-project { display: grid; grid-template-columns: 1.25fr 1fr; border-top: 1px solid var(--line); padding: 64px 0; gap: clamp(40px, 7vw, 100px); }
+.detail-project-visual { min-height: 470px; position: relative; display: grid; place-items: center; overflow: hidden; }
+.detail-project-visual > span { position: absolute; left: 24px; top: 22px; font: 12px var(--font-geist-mono), monospace; }
+.detail-project-visual > strong { font: 230px/1 Georgia, serif; color: rgba(21,21,21,.14); }
+.detail-project-visual > small { position: absolute; left: 24px; bottom: 24px; font: italic 17px Georgia, serif; }
+.detail-project-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.detail-project-copy h2 { margin: 30px 0 8px; font-size: clamp(38px, 4vw, 58px); letter-spacing: -.05em; line-height: 1; }
+.detail-project-copy h3 { margin: 0 0 28px; font: italic 20px Georgia, serif; color: #7457ee; }
+.detail-project-copy > p { line-height: 1.75; color: #57544f; font-size: 15px; }
+.result { border-left: 3px solid #7457ee; margin: 24px 0; padding: 4px 0 4px 18px; display: flex; flex-direction: column; gap: 6px; }
+.result b { font: 11px var(--font-geist-mono), monospace; text-transform: uppercase; }
+.result span { font-size: 14px; }
+.text-link { margin-top: 28px; border-bottom: 1px solid var(--ink); padding-bottom: 5px; font-size: 14px; }
+
+.service-cards { display: grid; grid-template-columns: repeat(2, 1fr); padding-bottom: 140px; border-top: 1px solid var(--line); }
+.service-cards article { min-height: 440px; padding: 45px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
+.service-cards article:nth-child(even) { border-right: 0; }
+.service-cards h2 { font-size: clamp(32px, 3.5vw, 48px); letter-spacing: -.045em; margin: 65px 0 20px; }
+.service-cards p { line-height: 1.7; color: #5b5852; max-width: 490px; }
+.service-cards ul { list-style: none; margin: auto 0 0; padding: 24px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 13px; font-size: 12px; }
+.service-cards li::before { content: "✦"; color: #7457ee; margin-right: 8px; }
+.page-cta { padding-top: 110px; }
+
+.about-story { display: grid; grid-template-columns: .85fr 1.15fr; border-top: 1px solid var(--line); padding: 90px 0 140px; gap: clamp(50px, 8vw, 120px); }
+.about-monogram { min-height: 610px; background: #d8ff4f; display: grid; place-items: center; position: relative; }
+.about-monogram img { width: 54%; filter: drop-shadow(30px 30px 0 rgba(21,21,21,.12)); }
+.about-monogram span { position: absolute; left: 24px; bottom: 24px; font: 11px var(--font-geist-mono), monospace; text-transform: uppercase; }
+.story-copy h2 { font-size: clamp(42px, 5vw, 68px); letter-spacing: -.055em; line-height: 1; margin: 0 0 42px; }
+.story-copy h2 em { color: #7457ee; }
+.story-copy > p { font-size: 16px; line-height: 1.8; color: #53504b; }
+.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 48px 0; padding-top: 25px; border-top: 1px solid var(--line); }
+.principles div { display: flex; flex-direction: column; gap: 18px; }
+.principles b { font: 11px var(--font-geist-mono), monospace; color: #7457ee; }
+.principles span { font-size: 13px; }
+.profile-links { display: flex; gap: 12px; }
+.profile-links a { border: 1px solid var(--ink); border-radius: 999px; padding: 13px 20px; font-size: 13px; }
+.page-contact { padding-top: 1px; }
+.page-contact footer { margin-top: 0; padding-block: 32px; }
 
 @media (max-width: 800px) {
   .shell { width: min(100% - 32px, 1240px); }
@@ -187,6 +234,17 @@ footer > div { display: flex; gap: 24px; font-size: 12px; }
   .stats { gap: 10px; }
   .stats strong { font-size: 25px; }
   .contact-inner h2 { font-size: 50px; }
+  .subpage-hero { padding: 72px 0 80px; }
+  .subpage-hero h1 { font-size: 58px; }
+  .subpage-hero > p { margin-left: 0; font-size: 16px; }
+  .detail-project { grid-template-columns: 1fr; gap: 38px; }
+  .detail-project-visual { min-height: 350px; }
+  .detail-project-visual > strong { font-size: 170px; }
+  .service-cards { grid-template-columns: 1fr; }
+  .service-cards article { border-right: 0; min-height: 390px; padding: 32px 4px; }
+  .about-story { grid-template-columns: 1fr; padding-top: 50px; }
+  .about-monogram { min-height: 460px; }
+  .principles { gap: 8px; }
   footer { align-items: flex-start; gap: 24px; }
   footer p { display: none; }
   footer > div { flex-direction: column; gap: 8px; text-align: right; }
