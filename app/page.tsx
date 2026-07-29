@@ -39,7 +39,7 @@ export default function Home() {
     <main>
       <header className="nav shell">
         <a className="brand" href="#top" aria-label="Ana sayfa">
-          S<span>✦</span>
+          <img src="/logo.svg" alt="Samet — Salesforce Developer" />
         </a>
         <nav aria-label="Ana menü">
           <a href="#work">Projeler</a>
@@ -176,7 +176,7 @@ export default function Home() {
           <a href="mailto:hello@samet.design">hello@samet.design <span>↗</span></a>
         </div>
         <footer className="shell">
-          <a className="brand" href="#top">S<span>✦</span></a>
+          <a className="brand" href="#top" aria-label="Ana sayfaya dön"><img src="/logo.svg" alt="Samet — Salesforce Developer" /></a>
           <p>© 2026 Samet. Salesforce üzerinde özenle geliştirildi.</p>
           <div><a href="#">LinkedIn</a><a href="#">GitHub</a><a href="#">Instagram</a></div>
         </footer>

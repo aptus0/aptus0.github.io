@@ -26,8 +26,8 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
 }
-.brand { font-size: 30px; font-weight: 900; letter-spacing: -3px; }
-.brand span { color: #7857ff; font-size: 20px; vertical-align: top; margin-left: 2px; }
+.brand { display: inline-flex; align-items: center; }
+.brand img { display: block; width: 174px; height: auto; }
 .nav nav { display: flex; gap: 34px; font-size: 14px; }
 .nav nav a { transition: opacity .2s; }
 .nav nav a:hover { opacity: .55; }
@@ -160,6 +160,7 @@ footer > div { display: flex; gap: 24px; font-size: 12px; }
 @media (max-width: 800px) {
   .shell { width: min(100% - 32px, 1240px); }
   .nav { height: 76px; }
+  .brand img { width: 142px; }
   .nav nav { display: none; }
   .nav-cta { padding: 12px 14px; }
   .hero { min-height: 660px; padding-top: 55px; }
