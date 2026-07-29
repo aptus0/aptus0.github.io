@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://aptus0.github.io
+Sitemap: https://aptus0.github.io/sitemap.xml
