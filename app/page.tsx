@@ -143,15 +143,15 @@ export default function Home() {
             <span className="section-number">(03) Hakkımda</span>
             <h2>Salesforce benim için bir CRM&apos;den fazlası: <em>iş süreçlerini dönüştüren bir platform.</em></h2>
             <p>
-              Karmaşık iş ihtiyaçlarını temiz veri modellerine, sürdürülebilir
-              Apex koduna ve kullanıcı dostu Lightning deneyimlerine
-              dönüştürüyorum. Her çözümde güvenlik, performans ve ölçeklenebilirliği
-              birlikte ele alıyorum.
+              ERP ve full-stack geliştirme deneyimimi Salesforce ekosistemiyle
+              birleştiriyor; karmaşık iş ihtiyaçlarını sürdürülebilir CRM
+              çözümlerine dönüştürüyorum. Bugün odağım Apex, LWC, Flow,
+              Agentforce ve yapay zekâ destekli müşteri deneyimleri.
             </p>
             <div className="stats">
-              <div><strong>4+</strong><span>Yıllık deneyim</span></div>
-              <div><strong>24</strong><span>CRM teslimatı</span></div>
-              <div><strong>3×</strong><span>Salesforce sertifikası</span></div>
+              <div><strong>10+</strong><span>Teknoloji alanı</span></div>
+              <div><strong>3</strong><span>Ürün platformu</span></div>
+              <div><strong>10+</strong><span>Yetkinlik belgesi</span></div>
             </div>
           </div>
         </div>

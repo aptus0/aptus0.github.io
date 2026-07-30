@@ -201,6 +201,99 @@ footer > div { display: flex; gap: 24px; font-size: 12px; }
 .principles span { font-size: 13px; }
 .profile-links { display: flex; gap: 12px; }
 .profile-links a { border: 1px solid var(--ink); border-radius: 999px; padding: 13px 20px; font-size: 13px; }
+.about-hero > p { max-width: 670px; }
+.story-copy > p + p { margin-top: 18px; }
+.expertise span { line-height: 1.35; }
+
+.credentials { background: var(--ink); color: #f4f1e8; }
+.credentials-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 74px;
+}
+.credentials-heading > div > p {
+  max-width: 330px;
+  margin: 24px 0 0;
+  color: #aaa79f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.credentials-heading h2 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 70px);
+  letter-spacing: -.05em;
+  line-height: 1;
+  font-weight: 500;
+}
+.credentials-heading h2 em { color: var(--acid); }
+.certificate-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.certificate-card {
+  min-width: 0;
+  border: 1px solid rgba(255,255,255,.2);
+  background: #211f1d;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s, border-color .25s;
+}
+.certificate-card:hover { transform: translateY(-5px); border-color: var(--acid); }
+.certificate-image {
+  aspect-ratio: 1.55;
+  overflow: hidden;
+  position: relative;
+  background: #ebe8e0;
+  display: grid;
+  place-items: center;
+}
+.certificate-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.certificate-card:hover .certificate-image img { transform: scale(1.02); }
+.certificate-image.certificate-badge { background: #2e168e; }
+.certificate-image.certificate-badge img { width: 58%; height: 76%; object-fit: contain; }
+.certificate-image > span {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: var(--acid);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.certificate-copy { padding: 28px; }
+.certificate-copy > span {
+  display: block;
+  color: var(--acid);
+  font: 11px var(--font-geist-mono), monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.certificate-copy h3 { margin: 16px 0 26px; font-size: 26px; line-height: 1.15; letter-spacing: -.035em; }
+.certificate-copy > div { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(255,255,255,.16); padding-top: 18px; }
+.certificate-copy time { font-size: 12px; }
+.certificate-copy small { color: #aaa79f; font-size: 11px; text-align: right; }
+.additional-credentials {
+  display: grid;
+  grid-template-columns: .8fr 2fr;
+  gap: 70px;
+  margin-top: 100px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+.additional-credentials > div:first-child p { max-width: 330px; color: #aaa79f; line-height: 1.6; font-size: 13px; margin-top: 22px; }
+.credential-list { border-top: 1px solid rgba(255,255,255,.18); }
+.credential-list article {
+  display: grid;
+  grid-template-columns: 42px 1.4fr 1fr auto;
+  align-items: center;
+  gap: 20px;
+  min-height: 94px;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.credential-list article > span { color: var(--acid); font: 10px var(--font-geist-mono), monospace; }
+.credential-list h3 { margin: 0; font-size: 17px; font-weight: 500; }
+.credential-list p, .credential-list time { margin: 0; color: #aaa79f; font-size: 12px; }
 .page-contact { padding-top: 1px; }
 .page-contact footer { margin-top: 0; padding-block: 32px; }
 
@@ -245,6 +338,14 @@ footer > div { display: flex; gap: 24px; font-size: 12px; }
   .about-story { grid-template-columns: 1fr; padding-top: 50px; }
   .about-monogram { min-height: 460px; }
   .principles { gap: 8px; }
+  .credentials-heading { grid-template-columns: 1fr; gap: 38px; margin-bottom: 52px; }
+  .certificate-grid { grid-template-columns: 1fr; }
+  .certificate-copy { padding: 22px; }
+  .certificate-copy h3 { font-size: 23px; }
+  .additional-credentials { grid-template-columns: 1fr; gap: 35px; margin-top: 75px; }
+  .credential-list article { grid-template-columns: 30px 1fr auto; padding: 18px 0; }
+  .credential-list article p { grid-column: 2 / 3; }
+  .credential-list article time { grid-column: 3; grid-row: 1 / 3; }
   footer { align-items: flex-start; gap: 24px; }
   footer p { display: none; }
   footer > div { flex-direction: column; gap: 8px; text-align: right; }
