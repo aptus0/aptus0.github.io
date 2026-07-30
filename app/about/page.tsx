@@ -79,9 +79,15 @@ export default function AboutPage() {
       </section>
 
       <section className="about-story shell">
-        <div className="about-monogram about-portrait-art">
-          <img src="/samet-profile-square.png" alt="Samet ER portresi" />
-          <span>Bursa · Türkiye</span>
+        <div className="profile-stage" aria-label="Samet ER profil görseli">
+          <div className="profile-orbit profile-orbit-outer"><i /><i /><i /></div>
+          <div className="profile-orbit profile-orbit-inner"><i /><i /></div>
+          <div className="profile-photo-ring">
+            <img src="/samet-profile-square.png" alt="Salesforce Developer Samet ER portresi" />
+          </div>
+          <span className="profile-location">Bursa · Türkiye</span>
+          <span className="profile-role">Salesforce<br />Developer</span>
+          <b className="profile-star">✦</b>
         </div>
         <div className="story-copy">
           <h2>Meraktan başlayan,<br /><em>sürekli gelişen</em> bir yolculuk.</h2>

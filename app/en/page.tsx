@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const projects = [
   ["Karacabey Gross Market", "E-commerce · Mobile · ERP", "/projects/karacabey-gross-market.png", "Laravel, React and Flutter commerce platform with ERP inventory synchronization."],
   ["Erler AVM", "E-commerce · Native iOS", "/projects/erler-avm.png", "Unified web, native iOS, payments and real-time inventory experience."],
-  ["R3", "Retail ERP · Salesforce CRM", "/projects/r3-resoft.png", "Desktop retail ERP connected to Salesforce Customer 360 and sales workflows."],
+  ["R3 ERP", "SMB · Retail · Finance", "/projects/r3-erp-dashboard.jpeg", "Integrated desktop ERP for sales, purchasing, inventory, finance, retail, e-transformation and management reporting."],
 ];
 
 export default function EnglishHome() {

@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { enPosts, trPosts } from "@/lib/static-posts";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const pages: MetadataRoute.Sitemap = [
     {
       url: "https://aptus0.github.io/",
       lastModified: new Date("2026-07-30"),
@@ -65,4 +66,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
+  const posts: MetadataRoute.Sitemap = [
+    ...trPosts.map((post) => ({
+      url: `https://aptus0.github.io/blog/${post.slug}`,
+      lastModified: new Date(post.date), changeFrequency: "monthly" as const, priority: 0.75,
+    })),
+    ...enPosts.map((post) => ({
+      url: `https://aptus0.github.io/en/blog/${post.slug}`,
+      lastModified: new Date(post.date), changeFrequency: "monthly" as const, priority: 0.65,
+    })),
+  ];
+  return [...pages, ...posts];
 }

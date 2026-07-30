@@ -20,7 +20,15 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: post.keywords,
+    authors: [{ name: "Samet ER", url: "https://aptus0.github.io/about" }],
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title, description: post.excerpt, type: "article",
+      url: `/blog/${post.slug}`, publishedTime: post.date,
+      authors: ["Samet ER"], tags: post.keywords, locale: "tr_TR",
+    },
+    twitter: { card: "summary_large_image", title: post.title, description: post.excerpt },
   };
 }
 
@@ -36,14 +44,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = trPosts.find((item) => item.slug === slug);
   if (!post) notFound();
+  const articleSchema = {
+    "@context": "https://schema.org", "@type": "BlogPosting",
+    headline: post.title, description: post.excerpt, datePublished: post.date,
+    dateModified: post.date, inLanguage: "tr-TR", keywords: post.keywords.join(", "),
+    mainEntityOfPage: `https://aptus0.github.io/blog/${post.slug}`,
+    author: { "@type": "Person", name: "Samet ER", url: "https://aptus0.github.io/about" },
+    publisher: { "@type": "Person", name: "Samet ER" },
+  };
 
   return (
     <main>
       <SiteHeader />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <article className="shell blog-article">
         <a className="blog-back" href="/blog">← Tüm yazılar</a>
         <div className="blog-article-heading">
           <span className="section-number">Teknik not</span>
+          <div className="article-taxonomy">{post.category} · {post.readingTime}</div>
           <h1>{post.title}</h1>
           <p>{post.excerpt}</p>
           <time dateTime={post.date}>{formatDate(post.date)}</time>

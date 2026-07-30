@@ -9,7 +9,12 @@ export default function EnglishAbout() {
       <SiteHeader locale="en" />
       <section className="subpage-hero shell"><span className="section-number">(03) About</span><h1>Hello, I&apos;m<br /><em>Samet ER.</em></h1><p>A Salesforce and full-stack developer based in Bursa, building products at the intersection of enterprise systems, web technologies and customer experience.</p></section>
       <section className="about-story shell">
-        <div className="about-monogram about-portrait-art"><img src="/samet-profile-square.png" alt="Samet ER portrait" /><span>Bursa · Türkiye</span></div>
+        <div className="profile-stage" aria-label="Samet ER profile image">
+          <div className="profile-orbit profile-orbit-outer"><i /><i /><i /></div>
+          <div className="profile-orbit profile-orbit-inner"><i /><i /></div>
+          <div className="profile-photo-ring"><img src="/samet-profile-square.png" alt="Salesforce Developer Samet ER portrait" /></div>
+          <span className="profile-location">Bursa · Türkiye</span><span className="profile-role">Salesforce<br />Developer</span><b className="profile-star">✦</b>
+        </div>
         <div className="story-copy">
           <h2>A journey driven by<br /><em>continuous learning.</em></h2>
           <p>I studied Computer Programming at Anadolu University after graduating from an Anatolian High School. My interest in software began much earlier, while exploring programming languages and emerging technologies during middle and high school.</p>

@@ -26,7 +26,7 @@ const projects = [
     type: "Retail ERP · Salesforce CRM",
     description:
       "Perakende ERP operasyonlarını Salesforce Customer 360, satış ve onay süreçleriyle bağlayan kurumsal masaüstü platformu.",
-    image: "/projects/r3-resoft.png",
+    image: "/projects/r3-erp-dashboard.jpeg",
     tags: [".NET", "Salesforce", "Apex", "LWC"],
   },
 ];
@@ -43,6 +43,7 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero shell" id="top">
+        <div className="hero-grid" aria-hidden="true" />
         <div className="eyebrow">
           <span className="status-dot" />
           Salesforce projeleri için müsait · Bursa
@@ -67,6 +68,10 @@ export default function Home() {
         </div>
         <div className="hero-orbit orbit-one">✦</div>
         <div className="hero-orbit orbit-two">✦</div>
+        <div className="hero-proof">
+          <span>Salesforce</span><b>Apex · LWC · Flow</b>
+          <span>Enterprise</span><b>ERP · CRM · Commerce</b>
+        </div>
       </section>
 
       <section className="trust-strip">

@@ -5,10 +5,16 @@ import { SiteFooter, SiteHeader } from "../site-shell";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Salesforce, ERP, CRM ve Yazılım Blogu",
   description:
-    "Salesforce, ERP, e-ticaret, yazılım mimarisi ve ürün geliştirme üzerine Samet ER'in teknik notları.",
-  alternates: { canonical: "/blog" },
+    "Salesforce, Apex, LWC, Flow, Agentforce, ERP, CRM entegrasyonu, e-ticaret ve mobil uygulama geliştirme üzerine uygulamalı teknik rehberler.",
+  keywords: ["Salesforce blog", "ERP blog", "CRM entegrasyonu", "Apex", "LWC", "Agentforce", "e-ticaret ERP"],
+  alternates: { canonical: "/blog", languages: { "tr-TR": "/blog", en: "/en/blog" } },
+  openGraph: {
+    title: "Salesforce, ERP ve CRM Teknik Blogu | Samet ER",
+    description: "Kurumsal yazılım, Salesforce ve entegrasyon mimarileri üzerine özgün teknik rehberler.",
+    url: "/blog", type: "website", locale: "tr_TR",
+  },
 };
 
 function formatDate(value: string) {
@@ -41,6 +47,7 @@ export default async function BlogPage() {
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
                 </div>
+                <small className="blog-category">{post.category} · {post.readingTime}</small>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>
                 <a href={`/blog/${post.slug}`}>Yazıyı oku <span>↗</span></a>

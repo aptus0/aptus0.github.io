@@ -90,7 +90,7 @@ const structuredData = {
   "@id": "https://aptus0.github.io/#person",
     name: "Samet ER",
   url: "https://aptus0.github.io/",
-  image: "https://aptus0.github.io/og.png",
+  image: "https://aptus0.github.io/samet-profile-square.png",
   jobTitle: "Salesforce Developer",
   description:
     "Apex, Lightning Web Components, Flow ve Salesforce entegrasyonları geliştiren Salesforce Developer.",
@@ -105,7 +105,7 @@ const structuredData = {
     "REST API",
     "CRM Automation",
   ],
-  sameAs: ["https://github.com/aptus0"],
+  sameAs: ["https://github.com/aptus0", "https://www.salesforce.com/trailblazer/esdwwv1meq5dlx2mq7"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bursa",
