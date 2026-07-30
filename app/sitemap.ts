@@ -28,5 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://aptus0.github.io/blog",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 }

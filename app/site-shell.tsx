@@ -12,6 +12,7 @@ export function SiteHeader() {
         <a href="/services">Hizmetler</a>
         <a href="/about">Hakkımda</a>
         <a href="/about#certificates">Sertifikalar</a>
+        <a href="/blog">Blog</a>
       </nav>
       <a className="nav-cta" href={linkedinUrl} target="_blank" rel="noreferrer">
         Birlikte çalışalım <span>↗</span>
