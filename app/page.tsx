@@ -1,6 +1,7 @@
 const projects = [
   {
     number: "01",
+    theme: "karacabey",
     title: "Karacabey Gross Market",
     type: "E-ticaret · Mobil · ERP",
     description:
@@ -10,6 +11,7 @@ const projects = [
   },
   {
     number: "02",
+    theme: "erler",
     title: "Erler AVM",
     type: "E-ticaret · Native iOS",
     description:
@@ -19,6 +21,7 @@ const projects = [
   },
   {
     number: "03",
+    theme: "r3",
     title: "R3",
     type: "Retail ERP · Salesforce CRM",
     description:
@@ -84,9 +87,13 @@ export default function Home() {
         <div className="projects">
           {projects.map((project) => (
             <article className="project" key={project.title}>
-              <div className="project-visual home-project-cover">
+              <div className={`project-visual home-project-cover home-cover-${project.theme}`}>
                 <span className="project-index">{project.number}</span>
-                <img src={project.image} alt={`${project.title} proje kapağı`} />
+                <div className="home-cover-glow" />
+                <div className="home-cover-screen">
+                  <div className="screen-chrome"><i /><i /><i /><span>{project.title}</span></div>
+                  <img src={project.image} alt={`${project.title} proje kapağı`} />
+                </div>
                 <a href="/projects" aria-label={`${project.title} projesini incele`}>↗</a>
               </div>
               <div className="project-info">

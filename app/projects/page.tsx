@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const projects = [
   {
     number: "01",
+    theme: "karacabey",
     title: "Karacabey Gross Market",
     subtitle: "ERP destekli omnichannel market platformu",
     image: "/projects/karacabey-gross-market.png",
@@ -22,11 +23,14 @@ const projects = [
       ["ERP", "Microsoft SQL Server ile ürün, stok ve sipariş senkronizasyonu"],
     ],
     result: "Web, mobil, operasyon ve ERP arasında tek ürün ve sipariş akışı",
+    signal: "Omnichannel Commerce",
+    metric: "Web · iOS · Android",
     tags: ["Laravel 13", "React 19", "Inertia.js", "Flutter", "Filament", "MSSQL", "PayTR"],
     href: "https://github.com/aptus0/KaracabeyGrossMarket",
   },
   {
     number: "02",
+    theme: "erler",
     title: "Erler AVM",
     subtitle: "Modern web mağazası ve native iOS deneyimi",
     image: "/projects/erler-avm.png",
@@ -38,11 +42,14 @@ const projects = [
       ["Operasyon", "Akbank 3D Secure, PayTR, güvenli REST API ve rol yönetimi"],
     ],
     result: "Web, iOS ve mağaza operasyonları için ortak ve ölçeklenebilir ticaret altyapısı",
+    signal: "Unified Retail",
+    metric: "Web · Native iOS",
     tags: ["Laravel 13", "Vue 3", "TypeScript", "Inertia.js", "SwiftUI", "MSSQL", "Sanctum"],
     href: "https://github.com/aptus0/ErlerAvm",
   },
   {
     number: "03",
+    theme: "r3",
     title: "R3",
     subtitle: "ReSoft Adaptive CRM & Retail ERP",
     image: "/projects/r3-resoft.png",
@@ -54,6 +61,8 @@ const projects = [
       ["Salesforce", "Apex, LWC, Flow ve güvenli entegrasyon servisleri"],
     ],
     result: "ERP operasyonu ile müşteri ve satış ekipleri arasında kesintisiz karar desteği",
+    signal: "ERP × CRM",
+    metric: "Desktop · Cloud",
     tags: [".NET", "C#", "SQLite", "Salesforce", "Apex", "LWC", "Flow", "REST API"],
     href: "https://github.com/aptus0/Re",
   },
@@ -76,9 +85,33 @@ export default function ProjectsPage() {
       <section className="shell detail-projects">
         {projects.map((project) => (
           <article className="detail-project project-case" key={project.title}>
-            <div className="detail-project-visual project-cover">
-              <img src={project.image} alt={`${project.title} ürün ekranları`} />
-              <span>{project.number}</span>
+            <div className={`detail-project-visual project-showcase showcase-${project.theme}`}>
+              <div className="showcase-aurora" />
+              <div className="showcase-grid" />
+              <div className="showcase-orbit orbit-a" />
+              <div className="showcase-orbit orbit-b" />
+
+              <div className="showcase-screen screen-back" aria-hidden="true">
+                <img src={project.image} alt="" />
+              </div>
+              <div className="showcase-screen screen-main">
+                <div className="screen-chrome">
+                  <i /><i /><i />
+                  <span>{project.title}</span>
+                </div>
+                <img src={project.image} alt={`${project.title} ürün ekranları`} />
+              </div>
+
+              <div className="showcase-chip chip-index">{project.number}</div>
+              <div className="showcase-chip chip-signal">
+                <i />
+                <span>{project.signal}</span>
+              </div>
+              <div className="showcase-chip chip-metric">
+                <small>PLATFORM</small>
+                <strong>{project.metric}</strong>
+              </div>
+              <div className="showcase-shadow" />
             </div>
             <div className="detail-project-copy">
               <span className="section-number">{project.number} · Seçilmiş proje</span>
