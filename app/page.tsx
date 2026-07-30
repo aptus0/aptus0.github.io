@@ -1,30 +1,30 @@
 const projects = [
   {
     number: "01",
-    title: "Sales Cloud 360",
-    type: "Salesforce CRM · 2026",
+    title: "Karacabey Gross Market",
+    type: "E-ticaret · Mobil · ERP",
     description:
-      "Satış ekipleri için fırsat yönetimini sadeleştiren, otomasyon ve gerçek zamanlı raporlama odaklı CRM çözümü.",
-    color: "project-blue",
-    tags: ["Apex", "LWC", "Sales Cloud"],
+      "Özel web mağazası, Flutter mobil uygulaması, yönetim paneli ve ERP stok senkronizasyonunu birleştiren omnichannel market platformu.",
+    image: "/projects/karacabey-gross-market.png",
+    tags: ["Laravel", "React", "Flutter", "MSSQL"],
   },
   {
     number: "02",
-    title: "Service Hub",
-    type: "Service Cloud · 2025",
+    title: "Erler AVM",
+    type: "E-ticaret · Native iOS",
     description:
-      "Omnichannel yönlendirme ve akıllı vaka akışlarıyla müşteri destek operasyonlarını hızlandıran platform.",
-    color: "project-lime",
-    tags: ["Service Cloud", "Flow", "Integration"],
+      "Web mağazası, SwiftUI mobil uygulaması, güvenli ödeme ve gerçek zamanlı stok yönetimini tek sistemde buluşturan e-ticaret ürünü.",
+    image: "/projects/erler-avm.png",
+    tags: ["Laravel", "Vue", "SwiftUI", "MSSQL"],
   },
   {
     number: "03",
-    title: "Partner Connect",
-    type: "Experience Cloud · 2025",
+    title: "R3",
+    type: "Retail ERP · Salesforce CRM",
     description:
-      "İş ortaklarının teklif, sipariş ve destek süreçlerini tek noktadan yönettiği güvenli self-servis portal.",
-    color: "project-coral",
-    tags: ["Experience Cloud", "Apex API", "LWC"],
+      "Perakende ERP operasyonlarını Salesforce Customer 360, satış ve onay süreçleriyle bağlayan kurumsal masaüstü platformu.",
+    image: "/projects/r3-resoft.png",
+    tags: [".NET", "Salesforce", "Apex", "LWC"],
   },
 ];
 
@@ -84,16 +84,9 @@ export default function Home() {
         <div className="projects">
           {projects.map((project) => (
             <article className="project" key={project.title}>
-              <div className={`project-visual ${project.color}`}>
+              <div className="project-visual home-project-cover">
                 <span className="project-index">{project.number}</span>
-                <div className="mock-window">
-                  <div className="mock-bar"><i /><i /><i /></div>
-                  <div className="mock-content">
-                    <span>{project.title}</span>
-                    <strong>{project.title.charAt(0)}</strong>
-                    <small>Salesforce business solution</small>
-                  </div>
-                </div>
+                <img src={project.image} alt={`${project.title} proje kapağı`} />
                 <a href="/projects" aria-label={`${project.title} projesini incele`}>↗</a>
               </div>
               <div className="project-info">
