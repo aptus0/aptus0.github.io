@@ -34,5 +34,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: "https://aptus0.github.io/en",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://aptus0.github.io/en/projects",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://aptus0.github.io/en/services",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://aptus0.github.io/en/about",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://aptus0.github.io/en/blog",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
   ];
 }

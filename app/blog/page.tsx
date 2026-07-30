@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { getPublishedPosts } from "@/lib/blog";
+import { trPosts as posts } from "@/lib/static-posts";
 import { SiteFooter, SiteHeader } from "../site-shell";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -20,8 +20,6 @@ function formatDate(value: string) {
 }
 
 export default async function BlogPage() {
-  const posts = await getPublishedPosts();
-
   return (
     <main>
       <SiteHeader />
@@ -38,10 +36,10 @@ export default async function BlogPage() {
         {posts.length ? (
           <div className="blog-grid">
             {posts.map((post, index) => (
-              <article className={`blog-card blog-tone-${(index % 3) + 1}`} key={post.id}>
+              <article className={`blog-card blog-tone-${(index % 3) + 1}`} key={post.slug}>
                 <div className="blog-card-meta">
                   <span>{String(index + 1).padStart(2, "0")}</span>
-                  <time dateTime={post.createdAt}>{formatDate(post.createdAt)}</time>
+                  <time dateTime={post.date}>{formatDate(post.date)}</time>
                 </div>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>
@@ -49,12 +47,7 @@ export default async function BlogPage() {
               </article>
             ))}
           </div>
-        ) : (
-          <div className="blog-empty">
-            <span className="section-number">İlk yazı hazırlanıyor</span>
-            <h2>Yakında burada<br /><em>yeni fikirler olacak.</em></h2>
-          </div>
-        )}
+        ) : null}
       </section>
 
       <section className="contact page-contact"><SiteFooter /></section>

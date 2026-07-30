@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPublishedPost } from "@/lib/blog";
+import { trPosts } from "@/lib/static-posts";
 import { SiteFooter, SiteHeader } from "../../site-shell";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
@@ -13,7 +14,7 @@ export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPublishedPost(slug);
+  const post = trPosts.find((item) => item.slug === slug);
   if (!post) return { title: "Yazı bulunamadı" };
 
   return {
@@ -33,7 +34,7 @@ function formatDate(value: string) {
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = await getPublishedPost(slug);
+  const post = trPosts.find((item) => item.slug === slug);
   if (!post) notFound();
 
   return (
@@ -45,10 +46,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <span className="section-number">Teknik not</span>
           <h1>{post.title}</h1>
           <p>{post.excerpt}</p>
-          <time dateTime={post.createdAt}>{formatDate(post.createdAt)}</time>
+          <time dateTime={post.date}>{formatDate(post.date)}</time>
         </div>
         <div className="blog-body">
-          {post.content.split(/\n{2,}/).map((paragraph) => (
+          {post.content.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -56,4 +57,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="contact page-contact"><SiteFooter /></section>
     </main>
   );
+}
+
+export function generateStaticParams() {
+  return trPosts.map((post) => ({ slug: post.slug }));
 }
