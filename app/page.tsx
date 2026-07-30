@@ -135,8 +135,11 @@ export default function Home() {
 
       <section className="about shell section" id="about">
         <div className="about-card">
-          <div className="portrait" aria-label="Samet için portre alanı">
-            <div className="portrait-shape">S</div>
+          <div className="portrait portrait-profile">
+            <div className="profile-blob" />
+            <img src="/samet-profile-square.png" alt="Samet ER portresi" />
+            <i className="profile-dot" />
+            <b className="profile-spark">✦</b>
             <span>Bursa<br />Türkiye</span>
           </div>
           <div className="about-copy">

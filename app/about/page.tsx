@@ -79,8 +79,8 @@ export default function AboutPage() {
       </section>
 
       <section className="about-story shell">
-        <div className="about-monogram">
-          <img src="/favicon.svg" alt="Samet ER S monogramı" />
+        <div className="about-monogram about-portrait-art">
+          <img src="/samet-profile-editorial.png" alt="Samet ER portresi" />
           <span>Bursa · Türkiye</span>
         </div>
         <div className="story-copy">

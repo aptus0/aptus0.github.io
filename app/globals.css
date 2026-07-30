@@ -191,6 +191,57 @@ em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   font: 190px Georgia, serif; box-shadow: 28px 28px 0 rgba(255,255,255,.25);
 }
 .portrait > span { position: absolute; left: 24px; bottom: 24px; font: 11px/1.5 var(--font-geist-mono), monospace; text-transform: uppercase; }
+.portrait-profile {
+  background: #f2eee5;
+  isolation: isolate;
+}
+.portrait-profile::before,
+.portrait-profile::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(21,21,21,.76);
+  border-radius: 999px;
+  z-index: 3;
+}
+.portrait-profile::before { width: 230px; height: 230px; right: -125px; top: -125px; }
+.portrait-profile::after { width: 180px; height: 100px; left: -90px; bottom: 20px; border-style: dashed; }
+.portrait-profile > img {
+  width: min(82%, 450px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+  filter: contrast(1.05);
+  box-shadow: 26px 28px 0 rgba(116,87,238,.18);
+}
+.profile-blob {
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 1;
+  border-radius: 42% 58% 64% 36% / 45% 38% 62% 55%;
+  background: #7457ee;
+  transform: rotate(-12deg);
+  z-index: 1;
+}
+.profile-dot {
+  position: absolute;
+  right: 13%;
+  top: 14%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #d8ff4f;
+  z-index: 4;
+}
+.profile-spark {
+  position: absolute;
+  right: 8%;
+  bottom: 16%;
+  color: #ff6f55;
+  font-size: 34px;
+  z-index: 4;
+}
+.portrait-profile > span { z-index: 5; }
 .about-copy { padding: clamp(42px, 6vw, 90px); display: flex; flex-direction: column; justify-content: center; }
 .about-copy h2 { font-size: clamp(38px, 4.4vw, 62px); line-height: 1.05; letter-spacing: -.05em; margin: 44px 0 32px; font-weight: 500; }
 .about-copy h2 em { color: #7256ee; }
@@ -402,6 +453,27 @@ footer > div { display: flex; gap: 24px; font-size: 12px; }
 .about-monogram { min-height: 610px; background: #d8ff4f; display: grid; place-items: center; position: relative; }
 .about-monogram img { width: 54%; filter: drop-shadow(30px 30px 0 rgba(21,21,21,.12)); }
 .about-monogram span { position: absolute; left: 24px; bottom: 24px; font: 11px var(--font-geist-mono), monospace; text-transform: uppercase; }
+.about-portrait-art {
+  background: #eeeae1;
+  display: block;
+  overflow: hidden;
+}
+.about-portrait-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: none;
+  drop-shadow: none;
+}
+.about-portrait-art span {
+  color: #fff;
+  background: rgba(21,21,21,.78);
+  border: 1px solid rgba(255,255,255,.28);
+  padding: 10px 13px;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+}
 .story-copy h2 { font-size: clamp(42px, 5vw, 68px); letter-spacing: -.055em; line-height: 1; margin: 0 0 42px; }
 .story-copy h2 em { color: #7457ee; }
 .story-copy > p { font-size: 16px; line-height: 1.8; color: #53504b; }
